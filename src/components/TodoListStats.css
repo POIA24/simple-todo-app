@@ -1,0 +1,21 @@
+.todoListStats {
+	width: 30%;
+}
+
+.todoListStats .CircularProgressbar .CircularProgressbar-trail {
+	stroke: transparent;
+}
+
+.todoListStats .CircularProgressbar .CircularProgressbar-path {
+	stroke: rgba(255, 255, 255, 0.2);
+}
+
+.todoListStats .CircularProgressbar .CircularProgressbar-text {
+	fill: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+	.todoListStats {
+		width: 10%;
+	}
+}

@@ -1,8 +1,14 @@
 import "./TodoItem.css";
+import { forwardRef } from "react";
 import { useRecoilState } from "recoil";
 import { todoListState } from "../atoms"; //you must import your variables for calling
 
-const TodoItem = ({ item }) => {
+import { IconButton } from "@material-ui/core";
+import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
+import Checkbox from "@material-ui/core/Checkbox";
+
+const TodoItem = forwardRef((props, ref) => {
+	const { item } = props;
 	const [todoList, setTodoList] = useRecoilState(todoListState);
 	const index = todoList.findIndex((listItem) => listItem === item);
 
@@ -31,7 +37,7 @@ const TodoItem = ({ item }) => {
 		setTodoList(newList);
 
 		//if the todoList is empty set the local storage to empty
-		if (newList.length == 0) {
+		if (newList.length === 0) {
 			localStorage.setItem("todoListStorage", JSON.stringify(newList));
 		}
 	};
@@ -55,16 +61,18 @@ const TodoItem = ({ item }) => {
 	};
 
 	return (
-		<div className="todoItem">
+		<div ref={ref} className={`todoItem  ${item.isComplete}`}>
 			<input type="text" value={item.text} onChange={editItemText} />
-			<input
-				type="checkbox"
+			<Checkbox
+				size="small"
 				checked={item.isComplete}
 				onChange={toggleItemCompletion}
 			/>
-			<button onClick={deleteItem}>X</button>
+			<IconButton onClick={deleteItem}>
+				<ClearRoundedIcon />
+			</IconButton>
 		</div>
 	);
-};
+});
 
 export default TodoItem;
