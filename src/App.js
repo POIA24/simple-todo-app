@@ -7,6 +7,7 @@ import axios from "axios";
 //components
 import TodoCreator from "./components/TodoCreator";
 import TodoItem from "./components/TodoItem";
+import TodoListFilters from "./components/TodoListFilters";
 
 function App() {
 	const [quote, setQuote] = useState({ text: "Loading..." });
@@ -39,6 +40,7 @@ function App() {
 				<span className="app__quote-sub">{quote.author}</span>
 			</h1>
 
+			<TodoListFilters />
 			<TodoCreator />
 
 			<div className="app__todoList">
