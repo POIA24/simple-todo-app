@@ -1,5 +1,7 @@
 # HI, THIS IS MY TODO APP
 
+deployed app: https://desimons.github.io/simple-todo-app/
+
 About me:
 https://www.linkedin.com/in/luca-de-simoni/
 https://www.instagram.com/de_simons/
