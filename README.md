@@ -1,11 +1,8 @@
 # HI, THIS IS MY TODO APP
 
-deployed app: https://desimons.github.io/simple-todo-app/
-
+deployed app: https://poia24.github.io/simple-todo-app/
 About me:
-https://www.linkedin.com/in/luca-de-simoni/
-https://www.instagram.com/de_simons/
-https://github.com/deSimons
+https://github.com/POIA24
 
 ## This is a fully functionality todo app with local storage
 
